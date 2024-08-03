@@ -6,7 +6,7 @@ export const Skills = () => {
     <section id="skills">
       <div className="pt-16 pb-24 relative overflow-hidden">
         <motion.div
-          className="absolute inset-0 bg-secundary"
+          className="absolute inset-0 bg-secundary "
           initial={{ scale: 0, borderRadius: "100%" }}
           whileInView={{ scale: 1, borderRadius: "0%" }}
           transition={{ duration: 1 }}
@@ -31,7 +31,7 @@ export const Skills = () => {
                   HABILIDADES
                 </span>
               </p>
-              <p className="mt-10 mb-7">
+              <p className="mt-10 mb-7 text-lg">
                 Minhas experiências me ajudaram a desenvolver e aprimorar várias
                 habilidades essenciais.
               </p>
