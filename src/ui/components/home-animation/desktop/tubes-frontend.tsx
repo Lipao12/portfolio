@@ -1,25 +1,25 @@
 import { motion } from "framer-motion";
 
-interface TubesProps {
+interface TubesFontendProps {
   coords: { x: number; y: number };
-  widthsFrontTech: number[];
+  widthsTech: number[];
   tubes_anim_duration: { v: number; h: number };
 }
 
-export const Tubes = ({
+export const TubesFontend = ({
   coords,
-  widthsFrontTech,
+  widthsTech,
   tubes_anim_duration,
-}: TubesProps) => {
+}: TubesFontendProps) => {
   const gap = 16;
   const totalWidth =
-    widthsFrontTech[0] +
+    widthsTech[0] +
     gap +
-    widthsFrontTech[1] +
+    widthsTech[1] +
     gap +
-    widthsFrontTech[2] +
+    widthsTech[2] +
     gap +
-    widthsFrontTech[3] / 2;
+    widthsTech[3] / 2;
   return (
     <div>
       <motion.svg
@@ -42,10 +42,25 @@ export const Tubes = ({
         <motion.rect
           x={coords.x}
           y="300"
-          width={widthsFrontTech[0] / 2 - coords.x}
+          width={
+            widthsTech[1] +
+            gap +
+            widthsTech[1] +
+            gap +
+            widthsTech[2] / 2 -
+            coords.x
+          }
           height="4"
           initial={{ width: 0 }}
-          animate={{ width: widthsFrontTech[0] / 2 - coords.x }}
+          animate={{
+            width:
+              widthsTech[1] +
+              gap +
+              widthsTech[1] +
+              gap +
+              widthsTech[2] / 2 -
+              coords.x,
+          }}
           transition={{
             duration: tubes_anim_duration.h,
             ease: "easeInOut",
@@ -55,7 +70,7 @@ export const Tubes = ({
           opacity="0.1"
         />
         <motion.rect
-          x={widthsFrontTech[0] / 2}
+          x={widthsTech[1] + gap + widthsTech[1] + gap + widthsTech[2] / 2}
           y={300}
           width="4"
           height="75"
@@ -86,22 +101,26 @@ export const Tubes = ({
           x={coords.x * 2}
           y="100"
           width={
-            widthsFrontTech[0] +
+            widthsTech[0] +
             gap +
-            widthsFrontTech[1] +
+            widthsTech[1] +
             gap +
-            widthsFrontTech[2] / 2 -
+            widthsTech[2] +
+            gap +
+            widthsTech[3] / 2 -
             coords.x * 2
           }
           height="4"
           initial={{ width: 0 }}
           animate={{
             width:
-              widthsFrontTech[0] +
+              widthsTech[0] +
               gap +
-              widthsFrontTech[1] +
+              widthsTech[1] +
               gap +
-              widthsFrontTech[2] / 2 -
+              widthsTech[2] +
+              gap +
+              widthsTech[3] / 2 -
               coords.x * 2,
           }}
           transition={{
@@ -114,11 +133,13 @@ export const Tubes = ({
         />
         <motion.rect
           x={
-            widthsFrontTech[0] +
+            widthsTech[0] +
             gap +
-            widthsFrontTech[1] +
+            widthsTech[1] +
             gap +
-            widthsFrontTech[2] / 2
+            widthsTech[2] +
+            gap +
+            widthsTech[3] / 2
           }
           y="100"
           width="4"
@@ -149,13 +170,31 @@ export const Tubes = ({
           x={coords.x * 3}
           y="155"
           width={
-            widthsFrontTech[0] + gap + widthsFrontTech[1] / 2 - coords.x * 3
+            widthsTech[0] +
+            gap +
+            widthsTech[1] +
+            gap +
+            widthsTech[2] +
+            gap +
+            widthsTech[3] +
+            gap +
+            widthsTech[4] / 2 -
+            coords.x * 3
           }
           height="4"
           initial={{ width: 0 }}
           animate={{
             width:
-              widthsFrontTech[0] + gap + widthsFrontTech[1] / 2 - coords.x * 3,
+              widthsTech[0] +
+              gap +
+              widthsTech[1] +
+              gap +
+              widthsTech[2] +
+              gap +
+              widthsTech[3] +
+              gap +
+              widthsTech[4] / 2 -
+              coords.x * 3,
           }}
           transition={{
             duration: tubes_anim_duration.h,
@@ -166,7 +205,17 @@ export const Tubes = ({
           opacity="0.1"
         />
         <motion.rect
-          x={widthsFrontTech[0] + gap + widthsFrontTech[1] / 2}
+          x={
+            widthsTech[0] +
+            gap +
+            widthsTech[1] +
+            gap +
+            widthsTech[2] +
+            gap +
+            widthsTech[3] +
+            gap +
+            widthsTech[4] / 2
+          }
           y={155}
           width="4"
           height="376-155"
@@ -196,26 +245,42 @@ export const Tubes = ({
           x={coords.x * 4}
           y="230"
           width={
-            widthsFrontTech[0] +
+            widthsTech[0] +
             gap +
-            widthsFrontTech[1] +
+            widthsTech[1] +
             gap +
-            widthsFrontTech[2] +
+            widthsTech[2] +
             gap +
-            widthsFrontTech[3] / 2 -
+            widthsTech[3] +
+            gap +
+            widthsTech[4] +
+            gap +
+            widthsTech[5] +
+            gap +
+            widthsTech[6] +
+            gap +
+            widthsTech[7] / 2 -
             coords.x * 4
           }
           height="4"
           initial={{ width: 0 }}
           animate={{
             width:
-              widthsFrontTech[0] +
+              widthsTech[0] +
               gap +
-              widthsFrontTech[1] +
+              widthsTech[1] +
               gap +
-              widthsFrontTech[2] +
+              widthsTech[2] +
               gap +
-              widthsFrontTech[3] / 2 -
+              widthsTech[3] +
+              gap +
+              widthsTech[4] +
+              gap +
+              widthsTech[5] +
+              gap +
+              widthsTech[6] +
+              gap +
+              widthsTech[7] / 2 -
               coords.x * 4,
           }}
           transition={{
@@ -228,13 +293,21 @@ export const Tubes = ({
         />
         <motion.rect
           x={
-            widthsFrontTech[0] +
+            widthsTech[0] +
             gap +
-            widthsFrontTech[1] +
+            widthsTech[1] +
             gap +
-            widthsFrontTech[2] +
+            widthsTech[2] +
             gap +
-            widthsFrontTech[3] / 2
+            widthsTech[3] +
+            gap +
+            widthsTech[4] +
+            gap +
+            widthsTech[5] +
+            gap +
+            widthsTech[6] +
+            gap +
+            widthsTech[7] / 2
           }
           y={230}
           width="4"

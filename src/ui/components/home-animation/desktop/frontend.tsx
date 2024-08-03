@@ -1,13 +1,18 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Technologies } from "./technologies";
-import { Tubes } from "./tubes";
+import { TubesBackend } from "./tubes-backend";
+import { TubesFontend } from "./tubes-frontend";
 
 export const FrontendAnimation = () => {
   const frontEndRef = useRef<any>(null);
+  const backEndRef = useRef<any>(null);
   const techsFrontRefs = useRef<any>([]);
-  const [widthsFrontTech, setWidthsFrontTech] = useState([]);
-  const [coords, setCoords] = useState({ x: 0, y: 0 });
+  const [widthsTech, setWidthsTech] = useState([]);
+  const [coords, setCoords] = useState([
+    { x: 0, y: 0 },
+    { x: 0, y: 0 },
+  ]);
   const [isHovered, setIsHovered] = useState(false);
   const tubes_anim_duration = { h: 1, v: 0.5 };
 
@@ -16,15 +21,32 @@ export const FrontendAnimation = () => {
       if (frontEndRef.current) {
         const x = frontEndRef.current.offsetWidth;
         const y = frontEndRef.current.offsetHeight;
-        setCoords({
-          x: (x - 33) / 4,
-          y: y / 4,
-        });
+
+        setCoords((prevCoords) => [
+          {
+            x: (x - 33) / 4,
+            y: y / 4,
+          },
+          prevCoords[1],
+        ]);
+      }
+      if (backEndRef.current) {
+        const x = backEndRef.current.offsetWidth;
+        console.log("Num: ", x);
+        const y = backEndRef.current.offsetHeight;
+        const offset = backEndRef.current.getBoundingClientRect().x;
+        setCoords((prevCoords) => [
+          prevCoords[0],
+          {
+            x: (x - 33) / 4,
+            y: y / 4,
+          },
+        ]);
       }
       const newWidths = techsFrontRefs.current.map(
         (ref: any) => ref?.offsetWidth || 0
       );
-      setWidthsFrontTech(newWidths);
+      setWidthsTech(newWidths);
     };
 
     calculateCoords();
@@ -34,9 +56,10 @@ export const FrontendAnimation = () => {
     };
   }, []);
 
-  console.log(widthsFrontTech);
   console.log(coords);
-  console.log(isHovered);
+  console.log(
+    backEndRef?.current && backEndRef?.current.getBoundingClientRect()
+  );
 
   return (
     <div className="w-4/5 h-[480px] stroke-current text-custom-stroke p-4  border-custom-text border-none mx-auto text-secundary">
@@ -56,6 +79,7 @@ export const FrontendAnimation = () => {
         </motion.div>
         <motion.div
           className="border rounded-md px-3 py-2 bg-secundary text-white shadow-md cursor-default"
+          ref={backEndRef}
           initial={{ opacity: 0.25 }}
           animate={{ opacity: [0.25, 0.25, 1, 1, 0.25] }}
           transition={{
@@ -70,11 +94,20 @@ export const FrontendAnimation = () => {
           <h1 className="text-[25px] ">Back End</h1>
         </motion.div>
       </div>
-      <Tubes
-        coords={coords}
-        widthsFrontTech={widthsFrontTech}
-        tubes_anim_duration={tubes_anim_duration}
-      />
+      <div className="relative">
+        <TubesFontend
+          coords={coords[0]}
+          widthsTech={widthsTech}
+          tubes_anim_duration={tubes_anim_duration}
+        />
+        <div className="absolute inset-0">
+          <TubesBackend
+            coords={coords[1]}
+            widthsTech={widthsTech}
+            tubes_anim_duration={tubes_anim_duration}
+          />
+        </div>
+      </div>
       <Technologies techsFrontRefs={techsFrontRefs} />
     </div>
   );
