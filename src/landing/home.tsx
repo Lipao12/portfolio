@@ -17,10 +17,9 @@ export const Home = () => {
           <div className="mt-5">
             <h1 className="text-4xl font-bold mb-4">Filipe Mai</h1>
             <p className="mb-6 text-lg">
-              Desenvolvedor apaixonado por tecnologia, com experiência em
-              JavaScript, Python, Node, TypeScript e React. Sempre em busca de
-              novos desafios e oportunidades para aprender e crescer
-              profissionalmente.
+              Sou um desenvolvedor apaixonado por JavaScript, Python, Node,
+              TypeScript e React, sempre buscando novos desafios e crescimento
+              profissional.
             </p>
             <button
               type="button"
@@ -41,7 +40,7 @@ export const Home = () => {
             <img
               onClick={() => {}}
               src={Profile}
-              alt="Imagem mostrando a dona do salão"
+              alt="Imagem de Filipe Mai"
               className="md:h-[500px] h-[200px] rounded-full transform -scale-x-100 hover:filter hover:saturate-200 transition duration-500 hover:cursor-pointer"
             />
           </div>

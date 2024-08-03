@@ -27,13 +27,13 @@ export const Skills = () => {
             >
               <p className="font-playfair font-semibold text-4xl mb-5">
                 MINHAS{" "}
-                <span className="text-secundary  px-1 bg-gradient-to-tr to-slate-50 from-secundary shadow-sm rounded-sm ">
+                <span className="text-secundary px-1 bg-gradient-to-tr to-slate-50 from-secundary shadow-sm rounded-sm ">
                   HABILIDADES
                 </span>
               </p>
               <p className="mt-10 mb-7">
-                Com as experiencias adquiridas, foi necessário polir algumas
-                habilidade
+                Minhas experiências me ajudaram a desenvolver e aprimorar várias
+                habilidades essenciais.
               </p>
             </motion.div>
             <motion.div
