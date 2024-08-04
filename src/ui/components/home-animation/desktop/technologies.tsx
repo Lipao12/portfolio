@@ -14,7 +14,7 @@ interface TechnologiesProps {
 }
 
 export const Technologies = forwardRef<HTMLDivElement, TechnologiesProps>(
-  ({ techsFrontRefs }, ref) => {
+  ({ techsFrontRefs }) => {
     const technologies = [
       <DiNodejs />,
       <BiLogoPostgresql />,

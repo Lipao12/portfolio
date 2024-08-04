@@ -12,14 +12,7 @@ export const TubesFontend = ({
   tubes_anim_duration,
 }: TubesFontendProps) => {
   const gap = 16;
-  const totalWidth =
-    widthsTech[0] +
-    gap +
-    widthsTech[1] +
-    gap +
-    widthsTech[2] +
-    gap +
-    widthsTech[3] / 2;
+
   return (
     <div>
       <motion.svg

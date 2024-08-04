@@ -38,7 +38,7 @@ export const Skills = () => {
             </motion.div>
             <motion.div
               className="mt-16 md:mt-0"
-              initial="hidden"
+              initial={"hidden"}
               whileInView={"visible"}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.5 }}

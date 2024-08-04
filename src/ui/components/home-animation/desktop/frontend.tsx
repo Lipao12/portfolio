@@ -34,7 +34,6 @@ export const FrontendAnimation = () => {
         const x = backEndRef.current.offsetWidth;
         console.log("Num: ", x);
         const y = backEndRef.current.offsetHeight;
-        const offset = backEndRef.current.getBoundingClientRect().x;
         setCoords((prevCoords) => [
           prevCoords[0],
           {

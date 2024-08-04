@@ -37,7 +37,7 @@ export const Projects = () => {
           >
             <FaCode className={iconStyles} />
           </div>
-          {projects.map((proj, index) => {
+          {projects.map((proj) => {
             return (
               <ProjectCard
                 key={proj.id}
