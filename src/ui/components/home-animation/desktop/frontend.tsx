@@ -13,7 +13,6 @@ export const FrontendAnimation = () => {
     { x: 0, y: 0 },
     { x: 0, y: 0 },
   ]);
-  const [isHovered, setIsHovered] = useState(false);
   const tubes_anim_duration = { h: 1, v: 0.5 };
 
   useEffect(() => {
@@ -86,9 +85,11 @@ export const FrontendAnimation = () => {
             duration: 10,
           }}
           onMouseEnter={() => {
-            setIsHovered(true);
+            //setIsHovered(true);
           }}
-          onMouseLeave={() => setIsHovered(false)}
+          onMouseLeave={() => {
+            //setIsHovered(false);
+          }}
         >
           <h1 className="text-[25px] ">Back End</h1>
         </motion.div>
