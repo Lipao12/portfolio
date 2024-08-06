@@ -1,16 +1,16 @@
+import projectImage1 from "./project-1.png";
 import projectImage2 from "./project-2.png";
 import projectImage3 from "./project-3.png";
 import projectImage4 from "./project-4.png";
-import projectImage1 from "./project-5.jpeg";
 
 export const projects = [
   {
     id: "1",
-    name: "Projeto 1",
+    name: "Gerador de Histórias a partir de Imagens",
     description:
-      "Projeto focado em [área/tecnologia], desenvolvido para demonstrar [objetivo/tecnologia].",
+      "Uma aplicação que transforma imagens em histórias utilizando Machine Learning. O sistema usa Flask para integração entre frontend e backend e modelos de ML para gerar textos e áudios.",
     full_description:
-      "O **Projeto 1** é uma iniciativa desenvolvida para explorar e implementar [área/tecnologia]. Este projeto foi projetado para [explicar o propósito ou objetivo do projeto], utilizando [tecnologias/metodologias específicas]. A solução oferece [benefícios/resultados esperados] e demonstra [aspectos importantes do projeto].",
+      "O **Gerador de Histórias a partir de Imagens** é um projeto inovador que converte imagens em histórias detalhadas usando técnicas de Machine Learning. A aplicação frontend, desenvolvida com React, se comunica com um backend em **Python (Flask)**. O fluxo inclui: obtenção de uma imagem aleatória via API Unsplash, conversão da imagem em texto com o modelo `Salesforce/blip-image-captioning-base`, criação de uma história com o modelo GPT-2, e conversão da história em áudio com o modelo `espnet/kan-bayashi_ljspeech_vits`. A solução é uma demonstração eficaz de como combinar modelos de ML para criar conteúdo multimodal a partir de imagens.",
     image: projectImage1,
   },
   {
