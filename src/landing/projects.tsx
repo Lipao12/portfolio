@@ -1,7 +1,9 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 import { FaCode, FaRobot } from "react-icons/fa";
 import { projects } from "../assets/projects";
 import { ProjectCard } from "../ui/components/project-card";
+import { ProjectExtended } from "../ui/components/project-expanded";
 
 const container = {
   hidden: {},
@@ -13,7 +15,8 @@ const container = {
 };
 
 export const Projects = () => {
-  const iconStyles = "text-6xl text-secundary";
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+
   return (
     <section id="projects" className="flex flex-col pt-16 pb-24 w-5/6 mx-auto">
       <div className="justify-center items-center flex flex-col mb-14">
@@ -34,30 +37,59 @@ export const Projects = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div
+          <motion.div
             className="flex justify-center text-center items-center p-10 bg-red
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+            layoutId="icon-1"
           >
-            <FaCode className={iconStyles} />
-          </div>
-          {projects.map((proj) => {
-            return (
+            <FaCode className="text-6xl text-secundary" />
+          </motion.div>
+          {projects.map((proj) => (
+            <motion.div
+              key={proj.id}
+              layoutId={proj.id}
+              onClick={() => setSelectedId(proj.id)}
+              className="cursor-pointer"
+            >
               <ProjectCard
-                key={proj.id}
                 project={proj}
-                title={""}
-                description={""}
+                title={proj.name}
+                description={proj.description}
               />
-            );
-          })}
-          <div
+            </motion.div>
+          ))}
+          <motion.div
             className="flex justify-center text-center items-center p-10 bg-blue
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+            layoutId="icon-2"
           >
-            <FaRobot className={iconStyles} />
-          </div>
+            <FaRobot className="text-6xl text-secundary" />
+          </motion.div>
         </motion.div>
       </div>
+      <AnimatePresence>
+        {selectedId &&
+          projects
+            .filter((proj) => proj.id === selectedId)
+            .map((proj) => (
+              <motion.div
+                key={proj.id}
+                layoutId={proj.id}
+                className="fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black bg-opacity-70 z-50 p-8"
+                onClick={() => setSelectedId(null)}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+              >
+                <ProjectExtended
+                  title={""}
+                  description={""}
+                  project={proj}
+                  setSelectedId={setSelectedId}
+                />
+              </motion.div>
+            ))}
+      </AnimatePresence>
     </section>
   );
 };

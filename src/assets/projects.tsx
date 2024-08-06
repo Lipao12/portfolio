@@ -1,7 +1,9 @@
-import projectImage1 from "./project-1.png";
-import projectImage2 from "./project-2.png";
-import projectImage3 from "./project-3.png";
 import projectImage4 from "./project-4.png";
+import {
+  default as projectImage1,
+  default as projectImage2,
+  default as projectImage3,
+} from "./project-6.jpeg";
 
 export const projects = [
   {

@@ -13,14 +13,17 @@ interface ProjectCardProps {
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-80 transition duration-300
     z-30 flex flex-col justify-end items-start text-start pb-5 px-12 text-secundary group text-white hover:bg-black cursor-pointer`;
-  console.log(project);
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{project.name}</p>
         <p className="mt-7">{project.description}</p>
       </div>
-      <img src={project.image} alt={`Projeto: ${project.name}`} />
+      <img
+        src={project.image}
+        alt={`Projeto: ${project.name}`}
+        className="h-[400px] w-[400px] object-cover"
+      />
     </motion.div>
   );
 };
