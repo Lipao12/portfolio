@@ -44,8 +44,9 @@ export const Projects = () => {
             return (
               <ProjectCard
                 key={proj.id}
-                title={proj.name}
-                description={proj.description}
+                project={proj}
+                title={""}
+                description={""}
               />
             );
           })}

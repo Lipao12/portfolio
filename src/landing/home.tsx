@@ -21,13 +21,13 @@ export const Home = () => {
               TypeScript e React, sempre buscando novos desafios e crescimento
               profissional.
             </p>
-            <button
+            {/*<button
               type="button"
               onClick={() => {}}
               className="px-6 py-2 bg-secundary text-white rounded-md transition hover:bg-[#444b5b] duration-300"
             >
               Contato
-            </button>
+            </button>*/}
             <SocialMediaIcons />
           </div>
         </div>

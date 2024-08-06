@@ -68,7 +68,7 @@ export const FrontendAnimation = () => {
           initial={{ opacity: 1 }}
           animate={{ opacity: [1, 0.5, 1] }}
           transition={{
-            duration: tubes_anim_duration.h,
+            duration: tubes_anim_duration.h * 2,
             repeat: Infinity,
             delay: 4,
           }}
@@ -78,11 +78,12 @@ export const FrontendAnimation = () => {
         <motion.div
           className="border rounded-md px-3 py-2 bg-secundary text-white shadow-md cursor-default"
           ref={backEndRef}
-          initial={{ opacity: 0.25 }}
-          animate={{ opacity: [0.25, 0.25, 1, 1, 0.25] }}
+          initial={{ opacity: 1 }}
+          animate={{ opacity: [1, 0.5, 1] }}
           transition={{
+            duration: tubes_anim_duration.h * 2,
             repeat: Infinity,
-            duration: 10,
+            delay: 4,
           }}
           onMouseEnter={() => {
             //setIsHovered(true);
