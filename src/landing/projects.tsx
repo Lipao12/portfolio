@@ -17,10 +17,13 @@ export const Projects = () => {
   return (
     <section id="projects" className="flex flex-col pt-16 pb-24 w-5/6 mx-auto">
       <div className="justify-center items-center flex flex-col mb-14">
-        <h1 className="font-playfair font-semibold text-5xl mb-6">Projetos</h1>
-        <p className="text-lg">
-          Aqui estão alguns dos meus projetos. Sinta-se à vontade para
-          explorá-los.
+        <h1 className="font-playfair font-semibold text-5xl mb-6">
+          Meus Projetos
+        </h1>
+        <p className="text-lg w-1/2">
+          Confira alguns dos meus projetos mais interessantes e veja como minhas
+          habilidades em desenvolvimento foram aplicadas para criar soluções
+          inovadoras e eficazes.
         </p>
       </div>
       <div className="flex justify-center">
