@@ -75,18 +75,18 @@ export const Projects = () => {
               <motion.div
                 key={proj.id}
                 layoutId={proj.id}
-                className="fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black bg-opacity-70 z-50 p-8"
+                className="fixed top-0 left-0 right-0 bottom-0 flex py-10 justify-center items-center bg-black bg-opacity-70 z-50 p-8"
                 onClick={() => setSelectedId(null)}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
               >
-                <ProjectExtended
-                  title={""}
-                  description={""}
-                  project={proj}
-                  setSelectedId={setSelectedId}
-                />
+                <div className="relative max-h-[90vh] max-w-[90vw] overflow-y-auto bg-white rounded-lg shadow-lg">
+                  <ProjectExtended
+                    project={proj}
+                    setSelectedId={setSelectedId}
+                  />
+                </div>
               </motion.div>
             ))}
       </AnimatePresence>
