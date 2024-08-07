@@ -22,7 +22,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
       <img
         src={project.image}
         alt={`Projeto: ${project.name}`}
-        className="h-[400px] w-[400px] object-cover"
+        className="h-[400px] w-[400px] object-full"
       />
     </motion.div>
   );

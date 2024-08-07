@@ -1,8 +1,7 @@
+import projectImage1 from "./project-1.png";
+import projectImage2 from "./project-2.png";
+import projectImage3 from "./project-3.png";
 import projectImage4 from "./project-4.png";
-import {
-  default as projectImage1,
-  default as projectImage2,
-} from "./project-6.jpeg";
 
 export const projects = [
   {
@@ -47,7 +46,7 @@ A aplicação é desenvolvida com **TypeScript** e **Tailwind CSS** no frontend 
     
 ## Desafios e Soluções
 - **Precisão na Reconstrução:** Implementação de algoritmos sofisticados para garantir alta precisão na reconstrução 3D.`,
-    image: projectImage2,
+    image: projectImage3,
   },
   {
     id: "4",
@@ -56,14 +55,14 @@ A aplicação é desenvolvida com **TypeScript** e **Tailwind CSS** no frontend 
       "Aplicação web para análise de sentimentos em textos usando um modelo treinado, com frontend em TypeScript e backend em Python.",
     full_description: `**Análise de Sentimento**
 
-A **Análise de Sentimento** é uma aplicação web projetada para avaliar o tom e a emoção de textos inseridos pelos usuários. Utilizando um modelo de análise de sentimento baseado no **DistilBERT** da Hugging Face, ajustado com o **Trainer** da Hugging Face para garantir precisão, a aplicação oferece uma análise detalhada dos sentimentos expressos.
+A **Análise de Sentimento** é uma aplicação web projetada para avaliar o tom e a emoção de textos inseridos pelos usuários. Utilizando um modelo de análise de sentimento baseado no \`DistilBERT\` da Hugging Face, ajustado com o **Trainer** da Hugging Face para garantir precisão, a aplicação oferece uma análise detalhada dos sentimentos expressos.
 
 Desenvolvido com **TypeScript**, **Tailwind CSS** e **Framer**, o frontend proporciona uma interface moderna, interativa e responsiva. O uso de **Framer** permite animações suaves e uma experiência de usuário aprimorada. O backend, construído com **Python (Flask)**, assegura um processamento eficiente e ágil dos dados.
 
 A aplicação classifica os textos em categorias de sentimento como positivo, negativo ou neutro, fornecendo uma ferramenta valiosa para analisar feedbacks, opiniões e qualquer outro tipo de dado textual que requer uma compreensão emocional detalhada.
 
 ## Principais Características:
-- **Modelo de Sentimento:** Baseado em **DistilBERT** e ajustado com o **Trainer** da Hugging Face.
+- **Modelo de Sentimento:** Baseado em \`DistilBERT\` e ajustado com o **Trainer** da Hugging Face.
 - **Frontend:** Desenvolvido com **TypeScript**, **Tailwind CSS** e **Framer** para uma interface moderna e responsiva.
 - **Backend:** Implementado em **Python (Flask)** para processamento eficiente.
 - **Funcionalidades:** Classificação de sentimentos em positivo, negativo ou neutro.`,
