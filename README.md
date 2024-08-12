@@ -1,30 +1,27 @@
-# React + TypeScript + Vite
+# Meu Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o repositório do meu portfólio pessoal. Nele, você encontrará informações sobre mim, minhas habilidades e projetos que desenvolvi ao longo da minha carreira.
 
-Currently, two official plugins are available:
+## Índice
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Sobre](#sobre)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
 
-## Expanding the ESLint configuration
+## Sobre
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Este portfólio foi desenvolvido com o objetivo de apresentar minhas habilidades e projetos de maneira profissional e acessível. Ele é responsivo, fácil de navegar, e foi projetado para ser intuitivo em desktops.
 
-- Configure the top-level `parserOptions` property like this:
+## Funcionalidades
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- **Apresentação pessoal:** Informações sobre mim.
+- **Soft Skills:** Destaque para habilidades interpessoais que desenvolvi ao longo da minha carreira.
+- **Portfólio de Projetos:** Exibição de projetos com descrições detalhadas.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Tecnologias Utilizadas
+
+- **Frontend:** React, TypeScript, Tailwind CSS
+- **Backend:** Flask
+- **Hospedagem:** Vercel
+
+Explore meu portfólio online [aqui](https://portfolio-omega-jet-24.vercel.app/) e descubra mais sobre meus projetos e habilidades.
