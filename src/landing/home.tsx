@@ -1,8 +1,23 @@
 import Profile from "../assets/profile-image.jpeg";
 import { MainAnimation } from "../ui/components/home-animation/desktop";
 import SocialMediaIcons from "../ui/components/social-media";
+import { useNavigate } from "react-router-dom";
 
-export const Home = () => {
+interface HomeProps {
+  setSelectedPage: (page: string) => void;
+}
+
+export const Home = ({ setSelectedPage }: HomeProps) => {
+  const navigate = useNavigate();
+
+  const handleGoToAboutUs = () => {
+    setSelectedPage("about-me");
+    navigate("/#skils");
+    window.scrollTo({
+      top: document.getElementById("skills")?.offsetTop || 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <section
       id="home"
@@ -38,7 +53,7 @@ export const Home = () => {
                             md:before:max-w-[600px] before:h-full before:border-2 before:z-[-1] before:border-[#bdbfc2]"
           >
             <img
-              onClick={() => {}}
+              onClick={handleGoToAboutUs}
               src={Profile}
               alt="Imagem de Filipe Mai"
               className="md:h-[500px] h-[200px] rounded-full transform -scale-x-100 hover:filter hover:saturate-200 transition duration-500 hover:cursor-pointer"

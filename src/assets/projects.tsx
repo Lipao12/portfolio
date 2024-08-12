@@ -65,7 +65,22 @@ A aplicação classifica os textos em categorias de sentimento como positivo, ne
 - **Modelo de Sentimento:** Baseado em \`DistilBERT\` e ajustado com o **Trainer** da Hugging Face.
 - **Frontend:** Desenvolvido com **TypeScript**, **Tailwind CSS** e **Framer** para uma interface moderna e responsiva.
 - **Backend:** Implementado em **Python (Flask)** para processamento eficiente.
-- **Funcionalidades:** Classificação de sentimentos em positivo, negativo ou neutro.`,
+- **Funcionalidades:** Classificação de sentimentos em positivo, negativo ou neutro.
+
+## Casos de Uso:
+- **Análise de Reviews:** Avaliação de feedback de clientes em plataformas de e-commerce.
+- **Monitoramento de Redes Sociais:** Análise de opiniões e emoções em postagens e comentários.
+- **Pesquisa de Mercado:** Compreensão de sentimentos em respostas a pesquisas e questionários.
+
+## Desafios e Soluções:
+- **Precisão do Modelo:** Ajustes e validação contínuos para garantir a precisão do modelo de análise de sentimento.
+- **Processamento em Tempo Real:** Otimização do backend para permitir análise em tempo real de grandes volumes de texto.
+- **Datasets em Português:** Uma dificuldade significativa foi encontrar datasets de qualidade em português para realizar a tarefa de análise de sentimentos. 
+
+## Resultados e Métricas:
+- **Precisão do Modelo:** O modelo alcança uma precisão de 90% em benchmarks internos, comparável aos melhores modelos de análise de sentimento disponíveis.
+
+Esta aplicação é uma ferramenta poderosa para qualquer organização que necessite de insights emocionais a partir de dados textuais, oferecendo uma interface intuitiva e resultados precisos.`,
     image: projectImage4,
   },
 ];
