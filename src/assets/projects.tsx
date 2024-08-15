@@ -2,29 +2,68 @@ import projectImage1 from "./project-1.png";
 import projectImage2 from "./project-2.png";
 import projectImage3 from "./project-3.png";
 import projectImage4 from "./project-4.png";
+import projectImage5 from "./project-5.png";
 
 export const projects = [
   {
-    id: "1",
-    name: "Gerador de Histórias a partir de Imagens",
+    id: "5",
+    name: "Sistema de Agendamento para Salão Natural Hair",
     description:
-      "Uma aplicação que transforma imagens em histórias utilizando Machine Learning. O sistema usa Flask para integração entre frontend e backend e modelos de ML para gerar textos e áudios.",
-    full_description:
-      "O **Gerador de Histórias a partir de Imagens** é um projeto inovador que converte imagens em histórias detalhadas usando técnicas de Machine Learning. A aplicação frontend, desenvolvida com React, se comunica com um backend em **Python (Flask)**. \n\n## Fluxo do Projeto\n\n - **Obtenção de Imagem**: A imagem é obtida aleatoriamente via API Unsplash ou feita o upload de uma imagem localmente.\n - **Conversão da Imagem em Texto**: Utiliza o modelo `Salesforce/blip-image-captioning-base` para gerar uma descrição textual da imagem.\n - **Criação de História**: A descrição textual é expandida em uma história completa usando o modelo GPT-2.\n - **Conversão de Texto em Áudio**: A história gerada é convertida em áudio utilizando o modelo `espnet/kan-bayashi_ljspeech_vits`.\n\nEssa solução demonstra de forma eficaz como combinar diferentes modelos de Machine Learning para criar conteúdo multimodal a partir de imagens.",
-    image: projectImage1,
+      "Um site de agendamento de serviços para o salão Natural Hair, com landing page, listagem de serviços e sistema de agendamento. Desenvolvido com TypeScript e Tailwind CSS no frontend e Firebase como banco de dados.",
+    full_description: `[![GitHub](https://img.shields.io/badge/GitHub-Natural--Hair-242933?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Lipao12/natural_hair)
+
+O **Sistema de Agendamento para Salão Natural Hair** é uma aplicação web voltada para facilitar o processo de marcação de serviços em um salão de beleza especializado. Com uma interface intuitiva e um sistema robusto, os clientes podem visualizar os serviços disponíveis, escolher o que desejam e agendar diretamente pelo site.
+
+Desenvolvido com **TypeScript** e **Tailwind CSS** no frontend, o site é responsivo e oferece uma experiência de usuário moderna e agradável. No backend, o uso do **Firebase** como banco de dados garante que os dados de agendamento sejam armazenados e gerenciados de forma eficiente.
+
+## Funcionalidades Principais:
+- **Landing Page:** Apresenta a profissional, o salão e seus diferenciais, com informações claras e imagens atraentes.
+- **Listagem de Serviços:** Exibe todos os serviços disponíveis no salão, como corte de cabelo, análise capilar, entre outros, com detalhes e preços.
+- **Sistema de Agendamento:** Permite que os clientes escolham um serviço, selecionem uma data e horário disponíveis, e façam a reserva de forma simples e rápida.
+
+## Tecnologias Utilizadas:
+- **TypeScript:** Linguagem principal para o desenvolvimento do frontend.
+- **Tailwind CSS:** Framework de CSS utilizado para estilização.
+- **Firebase:** Utilizado como banco de dados para armazenar e gerenciar agendamentos e informações dos serviços.
+
+## Casos de Uso:
+- **Agendamento de Serviços:** Ideal para clientes que desejam marcar horários de forma rápida e conveniente, evitando a necessidade de ligações telefônicas.
+
+## Desafios e Soluções:
+- **Sincronização de Horários:** Implementação de um sistema que garante a disponibilidade correta dos horários, evitando conflitos e sobreposições de agendamentos.
+- **Gerenciamento de Dados:** Uso do Firebase para um armazenamento seguro e eficiente das informações de clientes e agendamentos.
+`,
+    image: projectImage5,
   },
   {
     id: "2",
     name: "Planner",
     description:
       "Aplicação web para gerenciamento de viagens, com login e edição de detalhes. Desenvolvida com TypeScript e Tailwind CSS no frontend e Python (Flask) com PostgreSQL no backend.",
-    full_description: `O **Planner** é uma aplicação web que facilita a organização e gerenciamento de viagens, ideal para grupos de amigos. Após o login, os usuários podem visualizar suas viagens, criar novos planejamentos e modificar detalhes como datas e locais. As principais funcionalidades incluem:
-- **Login:** Acesso personalizado para cada usuário.
-- **Criação de Viagens:** Permite criar viagens especificando locais e intervalos de datas.
-- **Gerenciamento de Atividades:** Adicione atividades em horários e dias específicos dentro de cada viagem.
-- **Adicionar Links e Convidados:** Inclua links relevantes e convide amigos através de e-mails para participar da viagem.
+    full_description: `[![GitHub](https://img.shields.io/badge/GitHub-Planner-242933?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Lipao12/planner)
+    
+O **Planner** é uma aplicação web projetada para facilitar a organização e o gerenciamento de viagens, ideal para grupos de amigos ou famílias que desejam planejar suas aventuras de maneira colaborativa e organizada. 
 
-A aplicação é desenvolvida com **TypeScript** e **Tailwind CSS** no frontend para garantir uma interface moderna e responsiva, enquanto o backend utiliza **Python (Flask)** e **PostgreSQL** para o gerenciamento de dados e lógica do servidor. Embora a segurança e privacidade ainda não tenham sido implementadas, o Planner oferece uma experiência colaborativa e intuitiva para a criação e gestão de itinerários de viagem, com funcionalidades robustas e uma interface amigável.`,
+Desenvolvido com **TypeScript** e **Tailwind CSS** no frontend, o Planner oferece uma interface moderna, responsiva e intuitiva. O backend, construído com **Python (Flask)** e **PostgreSQL**, assegura um gerenciamento eficiente dos dados e lógica de negócios, proporcionando uma experiência de usuário robusta e confiável.
+
+## Principais Funcionalidades:
+- **Login Personalizado:** Cada usuário possui um acesso exclusivo, permitindo uma experiência personalizada e segura.
+- **Criação de Viagens:** Crie novas viagens especificando locais, datas e horários, garantindo um planejamento detalhado e completo.
+- **Gerenciamento de Atividades:** Adicione e organize atividades em horários e dias específicos dentro de cada viagem, facilitando o planejamento diário.
+- **Adicionar Links e Convidados:** Inclua links relevantes para a viagem e convide amigos ou familiares via e-mail para participar, tornando o planejamento uma experiência colaborativa.
+
+## Casos de Uso:
+- **Planejamento de Férias em Grupo:** Ideal para amigos ou famílias que desejam coordenar suas atividades e itinerários de forma integrada.
+
+## Desafios e Soluções:
+- **Segurança e Privacidade:** Embora ainda não implementadas, essas áreas estão em foco para futuras versões, visando proteger os dados dos usuários.
+- **Coordenação entre Participantes:** A aplicação foi otimizada para facilitar a colaboração e a comunicação entre os membros do grupo, assegurando que todos estejam sempre na mesma página.
+
+## Resultados e Métricas:
+- **Satisfação do Usuário:** Feedback inicial indica alta satisfação entre os usuários, especialmente pela facilidade de uso e pela interface colaborativa.
+
+O **Planner** se destaca como uma ferramenta essencial para qualquer grupo que deseja planejar viagens de forma organizada, colaborativa e eficiente, oferecendo funcionalidades completas e uma interface amigável que torna o processo de planejamento uma experiência agradável.
+`,
     image: projectImage2,
   },
   {
@@ -32,7 +71,9 @@ A aplicação é desenvolvida com **TypeScript** e **Tailwind CSS** no frontend 
     name: "Reconstrução da posição 3D de um robô móvel",
     description:
       "Projeto para detecção de robôs em vídeos e reconstrução de sua posição 3D utilizando marcadores ARUCO.",
-    full_description: `O **Projeto de Reconstrução da Posição 3D de um Robô Móvel** visa detectar robôs em vídeos capturados por câmeras e reconstruir sua posição tridimensional no espaço. Utilizando marcadores ARUCO acoplados aos robôs, o sistema realiza a detecção em imagens 2D e reconstrói a posição 3D dos robôs com precisão. O projeto foi desenvolvido em **Python** e emprega técnicas avançadas de processamento de imagem e visão computacional para garantir uma análise eficaz e precisa das posições dos robôs.
+    full_description: `[![GitHub](https://img.shields.io/badge/GitHub-Reconstrucao--da--posicao--3D-242933?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Lipao12/Reconstrucao-da-posicao-3D-de-um-robo-movel)
+    
+O **Projeto de Reconstrução da Posição 3D de um Robô Móvel** visa detectar robôs em vídeos capturados por câmeras e reconstruir sua posição tridimensional no espaço. Utilizando marcadores ARUCO acoplados aos robôs, o sistema realiza a detecção em imagens 2D e reconstrói a posição 3D dos robôs com precisão. O projeto foi desenvolvido em **Python** e emprega técnicas avançadas de processamento de imagem e visão computacional para garantir uma análise eficaz e precisa das posições dos robôs.
     
 ## Funcionalidades Principais
 - **Detecção de Robôs:** Utiliza marcadores ARUCO para identificar robôs em vídeos.
@@ -53,8 +94,8 @@ A aplicação é desenvolvida com **TypeScript** e **Tailwind CSS** no frontend 
     name: "Análise de Sentimento",
     description:
       "Aplicação web para análise de sentimentos em textos usando um modelo treinado, com frontend em TypeScript e backend em Python.",
-    full_description: `**Análise de Sentimento**
-
+    full_description: `[![GitHub](https://img.shields.io/badge/GitHub-sentiment--analysis-242933?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Lipao12/sentiment-analysis)
+    
 A **Análise de Sentimento** é uma aplicação web projetada para avaliar o tom e a emoção de textos inseridos pelos usuários. Utilizando um modelo de análise de sentimento baseado no \`DistilBERT\` da Hugging Face, ajustado com o **Trainer** da Hugging Face para garantir precisão, a aplicação oferece uma análise detalhada dos sentimentos expressos.
 
 Desenvolvido com **TypeScript**, **Tailwind CSS** e **Framer**, o frontend proporciona uma interface moderna, interativa e responsiva. O uso de **Framer** permite animações suaves e uma experiência de usuário aprimorada. O backend, construído com **Python (Flask)**, assegura um processamento eficiente e ágil dos dados.
@@ -68,9 +109,7 @@ A aplicação classifica os textos em categorias de sentimento como positivo, ne
 - **Funcionalidades:** Classificação de sentimentos em positivo, negativo ou neutro.
 
 ## Casos de Uso:
-- **Análise de Reviews:** Avaliação de feedback de clientes em plataformas de e-commerce.
-- **Monitoramento de Redes Sociais:** Análise de opiniões e emoções em postagens e comentários.
-- **Pesquisa de Mercado:** Compreensão de sentimentos em respostas a pesquisas e questionários.
+- **Monitoramento de Twitter:** Análise de opiniões e emoções em comentários do twit.
 
 ## Desafios e Soluções:
 - **Precisão do Modelo:** Ajustes e validação contínuos para garantir a precisão do modelo de análise de sentimento.
@@ -78,7 +117,7 @@ A aplicação classifica os textos em categorias de sentimento como positivo, ne
 - **Datasets em Português:** Uma dificuldade significativa foi encontrar datasets de qualidade em português para realizar a tarefa de análise de sentimentos. 
 
 ## Resultados e Métricas:
-- **Precisão do Modelo:** O modelo alcança uma precisão de 90% em benchmarks internos, comparável aos melhores modelos de análise de sentimento disponíveis.
+- **Precisão do Modelo:** O modelo alcança uma precisão de 90% em benchmarks internos.
 
 Esta aplicação é uma ferramenta poderosa para qualquer organização que necessite de insights emocionais a partir de dados textuais, oferecendo uma interface intuitiva e resultados precisos.`,
     image: projectImage4,
