@@ -10,7 +10,11 @@ export const Landing = () => {
     <div className="mx-auto space-y-8">
       <Home setSelectedPage={setSelectedPage} />
       <div className="md:h-full ">
-        <motion.div onViewportEnter={() => {}}>
+        <motion.div
+          onViewportEnter={() => {
+            selectedPage;
+          }}
+        >
           <Skills />
         </motion.div>
       </div>
