@@ -1,3 +1,4 @@
+import projectImage1 from "./project-1.png";
 import projectImage2 from "./project-2.png";
 import projectImage3 from "./project-3.png";
 import projectImage4 from "./project-4.png";
@@ -5,34 +6,36 @@ import projectImage5 from "./project-5.png";
 
 export const projects = [
   {
-    id: "5",
-    name: "Sistema de Agendamento para Salão Natural Hair",
+    id: "1",
+    name: "Gerador de Histórias a partir de Imagens",
     description:
-      "Um site de agendamento de serviços para o salão Natural Hair, com landing page, listagem de serviços e sistema de agendamento. Desenvolvido com TypeScript e Tailwind CSS no frontend e Firebase como banco de dados.",
-    full_description: `[![GitHub](https://img.shields.io/badge/GitHub-Natural--Hair-242933?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Lipao12/natural_hair)
+      "Uma aplicação que transforma imagens em histórias utilizando Machine Learning. O sistema usa Flask para integração entre frontend e backend e modelos de ML para gerar textos e áudios.",
+    full_description: `[![GitHub](https://img.shields.io/badge/GitHub-Image2Story-242933?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Lipao12/Image2Story)
 
-O **Sistema de Agendamento para Salão Natural Hair** é uma aplicação web voltada para facilitar o processo de marcação de serviços em um salão de beleza especializado. Com uma interface intuitiva e um sistema robusto, os clientes podem visualizar os serviços disponíveis, escolher o que desejam e agendar diretamente pelo site.
+O **Gerador de Histórias a partir de Imagens** é um projeto inovador que transforma imagens em histórias detalhadas utilizando técnicas avançadas de Machine Learning. Desenvolvido com **React** no frontend e **Python (Flask)** no backend, essa aplicação exemplifica a integração de modelos de IA para criar conteúdo multimodal.
 
-Desenvolvido com **TypeScript** e **Tailwind CSS** no frontend, o site é responsivo e oferece uma experiência de usuário moderna e agradável. No backend, o uso do **Firebase** como banco de dados garante que os dados de agendamento sejam armazenados e gerenciados de forma eficiente.
+## Fluxo do Projeto:
+- **Obtenção de Imagem:** A imagem é obtida aleatoriamente via API Unsplash ou pode ser carregada localmente pelo usuário, oferecendo flexibilidade na escolha da imagem.
+- **Conversão da Imagem em Texto:** Utiliza o modelo \`Salesforce/blip-image-captioning-base\` para gerar uma descrição textual precisa e detalhada da imagem.
+- **Criação de História:** A descrição textual é então expandida em uma narrativa completa, usando o modelo GPT-2, resultando em uma história envolvente e contextual.
+- **Conversão de Texto em Áudio:** A história gerada é convertida em áudio utilizando o modelo \`espnet/kan-bayashi_ljspeech_vits\`, tornando o conteúdo acessível e imersivo.
 
-## Funcionalidades Principais:
-- **Landing Page:** Apresenta a profissional, o salão e seus diferenciais, com informações claras e imagens atraentes.
-- **Listagem de Serviços:** Exibe todos os serviços disponíveis no salão, como corte de cabelo, análise capilar, entre outros, com detalhes e preços.
-- **Sistema de Agendamento:** Permite que os clientes escolham um serviço, selecionem uma data e horário disponíveis, e façam a reserva de forma simples e rápida.
-
-## Tecnologias Utilizadas:
-- **TypeScript:** Linguagem principal para o desenvolvimento do frontend.
-- **Tailwind CSS:** Framework de CSS utilizado para estilização.
-- **Firebase:** Utilizado como banco de dados para armazenar e gerenciar agendamentos e informações dos serviços.
+## Principais Funcionalidades:
+- **Interatividade Multimodal:** Combina imagens, texto e áudio em uma experiência integrada e interativa.
+- **Automação Criativa:** Demonstra como diferentes modelos de Machine Learning podem ser combinados para gerar conteúdo criativo e automatizado a partir de entradas visuais.
+- **Acessibilidade:** A conversão de texto em áudio torna o conteúdo acessível para um público mais amplo, incluindo pessoas com deficiência visual.
 
 ## Casos de Uso:
-- **Agendamento de Serviços:** Ideal para clientes que desejam marcar horários de forma rápida e conveniente, evitando a necessidade de ligações telefônicas.
+- **Educação e Entretenimento:** Ferramenta útil para criar histórias baseadas em imagens para fins educacionais ou de entretenimento.
+- **Criação de Conteúdo:** Ideal para escritores, educadores e criadores de conteúdo que buscam inspiração ou ferramentas automatizadas para a geração de narrativas.
 
 ## Desafios e Soluções:
-- **Sincronização de Horários:** Implementação de um sistema que garante a disponibilidade correta dos horários, evitando conflitos e sobreposições de agendamentos.
-- **Gerenciamento de Dados:** Uso do Firebase para um armazenamento seguro e eficiente das informações de clientes e agendamentos.
+- **Precisão na Geração de Histórias:** Ajustes nos modelos e validação contínua para garantir que as histórias geradas sejam coerentes e envolventes.
+- **Integração de Múltiplos Modelos:** Sincronização eficiente entre os diferentes modelos de Machine Learning para garantir uma experiência fluida e integrada.
+
+Essa solução demonstra de forma eficaz como combinar diferentes modelos de Machine Learning para criar conteúdo multimodal a partir de imagens, oferecendo uma abordagem inovadora para a geração automática de histórias.
 `,
-    image: projectImage5,
+    image: projectImage1,
   },
   {
     id: "2",
@@ -120,5 +123,35 @@ A aplicação classifica os textos em categorias de sentimento como positivo, ne
 
 Esta aplicação é uma ferramenta poderosa para qualquer organização que necessite de insights emocionais a partir de dados textuais, oferecendo uma interface intuitiva e resultados precisos.`,
     image: projectImage4,
+  },
+  {
+    id: "5",
+    name: "Sistema de Agendamento para Salão Natural Hair",
+    description:
+      "Um site de agendamento de serviços para o salão Natural Hair, com landing page, listagem de serviços e sistema de agendamento. Desenvolvido com TypeScript e Tailwind CSS no frontend e Firebase como banco de dados.",
+    full_description: `[![GitHub](https://img.shields.io/badge/GitHub-Natural--Hair-242933?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Lipao12/natural_hair)
+
+O **Sistema de Agendamento para Salão Natural Hair** é uma aplicação web voltada para facilitar o processo de marcação de serviços em um salão de beleza especializado. Com uma interface intuitiva e um sistema robusto, os clientes podem visualizar os serviços disponíveis, escolher o que desejam e agendar diretamente pelo site.
+
+Desenvolvido com **TypeScript** e **Tailwind CSS** no frontend, o site é responsivo e oferece uma experiência de usuário moderna e agradável. No backend, o uso do **Firebase** como banco de dados garante que os dados de agendamento sejam armazenados e gerenciados de forma eficiente.
+
+## Funcionalidades Principais:
+- **Landing Page:** Apresenta a profissional, o salão e seus diferenciais, com informações claras e imagens atraentes.
+- **Listagem de Serviços:** Exibe todos os serviços disponíveis no salão, como corte de cabelo, análise capilar, entre outros, com detalhes e preços.
+- **Sistema de Agendamento:** Permite que os clientes escolham um serviço, selecionem uma data e horário disponíveis, e façam a reserva de forma simples e rápida.
+
+## Tecnologias Utilizadas:
+- **TypeScript:** Linguagem principal para o desenvolvimento do frontend.
+- **Tailwind CSS:** Framework de CSS utilizado para estilização.
+- **Firebase:** Utilizado como banco de dados para armazenar e gerenciar agendamentos e informações dos serviços.
+
+## Casos de Uso:
+- **Agendamento de Serviços:** Ideal para clientes que desejam marcar horários de forma rápida e conveniente, evitando a necessidade de ligações telefônicas.
+
+## Desafios e Soluções:
+- **Sincronização de Horários:** Implementação de um sistema que garante a disponibilidade correta dos horários, evitando conflitos e sobreposições de agendamentos.
+- **Gerenciamento de Dados:** Uso do Firebase para um armazenamento seguro e eficiente das informações de clientes e agendamentos.
+`,
+    image: projectImage5,
   },
 ];
